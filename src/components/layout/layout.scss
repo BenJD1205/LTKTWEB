@@ -1,0 +1,25 @@
+.layout{
+    nav{
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        background-color:#2169;
+        color:#ffffff;
+        ul{
+            display: flex;
+            align-items: center;
+            gap:20px;
+            list-style: none;
+            li{
+                text-decoration: none;
+                padding:0px 20px;
+            }
+        }
+    }
+    .content{
+        display: flex;
+        margin-top: 24px;
+        padding:24px;
+        gap:16px;
+    }
+}
