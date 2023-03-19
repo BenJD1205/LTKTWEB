@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './hoa.scss'
 
 const Hoa = () => {
@@ -17,9 +17,9 @@ const Hoa = () => {
   return (
     <div className='hoa'>
       {hoas.map((item,idx) => (
-        <div key={idx} className='content'>
-          <span>{item.tenhoa}</span>
+        <div key={idx} className='card'>
           <img src={'http://localhost:5001/images/'+item.hinh} />
+          <Link to={`/chitiet/${item._id}`}>{item.tenhoa}</Link>
         </div>
       ))}
     </div>

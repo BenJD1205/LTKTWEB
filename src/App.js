@@ -7,6 +7,7 @@ import Contact from './pages/contact';
 import NoPage from './pages/404';
 import Loaihoa from './pages/loaihoa';
 import Hoa from './pages/hoa';
+import Detail from './pages/detail';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path='hoa'>
             <Route path=":maloai" element={<Hoa />} />
+          </Route>
+          <Route path="chitiet">
+            <Route path=":id" element={<Detail />} />
           </Route>
           <Route path="*" element={<NoPage />} />
         </Route>
