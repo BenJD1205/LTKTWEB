@@ -15,7 +15,7 @@ const Register = () => {
         await fetch(`${config.backendPort}/auth/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ tendangnhap, matkhau }),
+            body: JSON.stringify({ tennguoidung,tendangnhap, email,matkhau,sodienthoai }),
         })
             .then((res) => res.json())
             .then((user) => setUser(user))
