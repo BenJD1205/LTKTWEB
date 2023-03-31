@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import config from "../../config/config";
 import "./register.scss";
 
 const Register = () => {
@@ -7,9 +8,18 @@ const Register = () => {
     const [tendangnhap, setTenDangNhap] = useState("");
     const [matkhau, setMatKhau] = useState("");
     const [sodienthoai, setSoDienThoai] = useState("");
+    const [user, setUser] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        await fetch(`${config.backendPort}/auth/register`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ tendangnhap, matkhau }),
+        })
+            .then((res) => res.json())
+            .then((user) => setUser(user))
+            .catch((err) => console.log(err));
     };
 
     return (

@@ -18,7 +18,7 @@ const Login = () => {
                 const data = user[0];
                 localStorage.setItem("user", JSON.stringify(data));
             })
-            .catch((err) => console.log);
+            .catch((err) => console.log(err));
     };
 
     return (
