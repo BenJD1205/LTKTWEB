@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Loaihoa = () => {
 
+  const [search, setSearch] = useState('');
   const [loaihoas, setLoaihoas] = useState([]);
 
   useEffect(() => {
@@ -14,6 +15,9 @@ const Loaihoa = () => {
 
   return (
     <div>
+      <div className="search">
+        
+      </div>
       {loaihoas.map((item) => (
         <Link to={`/hoa/${item.maloai}`} key={item.maloai}>
           <span> {item.tenloai}</span>

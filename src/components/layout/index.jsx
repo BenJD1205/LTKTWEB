@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import Home from '../../pages/home';
+import Footer from '../footer';
 import './layout.scss';
 
 const Layout = () => {
@@ -22,6 +23,7 @@ const Layout = () => {
         <Home />
         <Outlet />
       </div>
+      <Footer />
     </div>
   )
 };
