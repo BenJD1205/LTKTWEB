@@ -15,9 +15,6 @@ const Loaihoa = () => {
 
   return (
     <div>
-      <div className="search">
-        
-      </div>
       {loaihoas.map((item) => (
         <Link to={`/hoa/${item.maloai}`} key={item.maloai}>
           <span> {item.tenloai}</span>
