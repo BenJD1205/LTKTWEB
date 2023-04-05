@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const Register = () => {
-  return (
-    <div>Register</div>
-  )
-}
-
-export default Register
-=======
 import React, { useState } from "react";
 import config from "../../config/config";
 import "./register.scss";
@@ -26,7 +15,13 @@ const Register = () => {
         await fetch(`${config.backendPort}/auth/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ tennguoidung,tendangnhap, email,matkhau,sodienthoai }),
+            body: JSON.stringify({
+                tennguoidung,
+                tendangnhap,
+                email,
+                matkhau,
+                sodienthoai,
+            }),
         })
             .then((res) => res.json())
             .then((user) => setUser(user))
@@ -84,4 +79,3 @@ const Register = () => {
 };
 
 export default Register;
->>>>>>> 31d6265acccc9ae900b7692712bc445f4b0030bb

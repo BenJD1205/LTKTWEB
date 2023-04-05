@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap:12px;
-    width: 150px;
+    min-width: 180px;
 
     .active{
         color:orange;

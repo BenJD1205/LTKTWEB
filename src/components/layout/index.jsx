@@ -1,44 +1,25 @@
-import { Outlet, Link } from "react-router-dom";
-<<<<<<< HEAD
-import Home from '../../pages/home';
-import Footer from '../footer';
-import './layout.scss';
-
-const Layout = () => {
-  return (
-    <div className="layout">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blogs">Blogs</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="content">
-        <Home />
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
-  )
-=======
+import { Outlet, Link, useNavigate, useLocation } from "react-router-dom";
 import Home from "../../pages/home";
 import { HiShoppingCart } from "react-icons/hi";
 import "./layout.scss";
+import { useEffect } from "react";
 
 const Layout = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === "/") {
+            navigate("/loaihoa");
+        }
+    }, []);
+
     return (
         <div className="layout">
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/loaihoa">Home</Link>
                     </li>
                     <li>
                         <Link to="/blogs">Blogs</Link>
@@ -65,7 +46,6 @@ const Layout = () => {
             </div>
         </div>
     );
->>>>>>> 31d6265acccc9ae900b7692712bc445f4b0030bb
 };
 
 export default Layout;
