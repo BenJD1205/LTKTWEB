@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Loaihoa = () => {
 
+  const [search, setSearch] = useState('');
   const [loaihoas, setLoaihoas] = useState([]);
 
   useEffect(() => {

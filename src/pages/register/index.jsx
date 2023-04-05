@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react'
+
+const Register = () => {
+  return (
+    <div>Register</div>
+  )
+}
+
+export default Register
+=======
 import React, { useState } from "react";
 import config from "../../config/config";
 import "./register.scss";
@@ -73,3 +84,4 @@ const Register = () => {
 };
 
 export default Register;
+>>>>>>> 31d6265acccc9ae900b7692712bc445f4b0030bb

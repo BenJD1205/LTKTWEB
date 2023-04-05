@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react'
+
+const Login = () => {
+  return (
+    <div>Login</div>
+  )
+}
+
+export default Login
+=======
 import React, { useState } from "react";
 import config from "../../config/config";
 
@@ -48,3 +59,4 @@ const Login = () => {
 };
 
 export default Login;
+>>>>>>> 31d6265acccc9ae900b7692712bc445f4b0030bb

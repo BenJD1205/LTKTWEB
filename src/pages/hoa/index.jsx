@@ -20,6 +20,8 @@ const Hoa = () => {
         <div key={idx} className='card'>
           <img src={'http://localhost:5001/images/'+item.hinh} />
           <Link to={`/chitiet/${item._id}`}>{item.tenhoa}</Link>
+          <span>Đơn giá: {item.dongia} VNĐ</span>
+          <button>Đặt mua</button>
         </div>
       ))}
     </div>
